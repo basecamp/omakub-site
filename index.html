@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Highlight</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1a1b26;
+            color: #c0caf5;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .command {
+            font-size: 1.5em;
+            font-weight: bold;
+            background: #1f2335;
+            color: #c0caf5;
+            padding: 20px;
+            border: 2px solid #3b4261;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .copy-button {
+            margin-top: 20px;
+            font-size: 1em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #7aa2f7;
+            color: #1a1b26;
+            cursor: pointer;
+        }
+        .copy-button:hover {
+            background-color: #3b4261;
+            color: #c0caf5;
+        }
+        .header {
+            font-size: 64px;
+            margin: 0;
+            padding: 0;
+            color: #b9f27c;
+        }
+        .tagline {
+            margin-top: 0;
+            padding-top: 0;
+            margin-bottom: 30px;
+            color: #7dcfff;
+        }
+    </style>
+
+    <script>
+        function copyToClipboard() {
+            const commandText = document.getElementById('command').innerText;
+            navigator.clipboard.writeText(commandText);
+        }
+    </script>
+</head>
+<body>
+    <h1 class="header">OMAKUB</h1>
+    <p class="tagline">An Omakase Developer Setup For Ubuntu 24.04 by DHH</p>
+    <div class="command" id="command">
+        wget -O- https://omakub.org/install | bash
+    </div>
+
+    <button class="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
+</body>
+</html>
