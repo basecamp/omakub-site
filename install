@@ -1,7 +1,7 @@
 cd ~/Downloads
-wget -qO omakub.tar.gz 'https://www.dropbox.com/scl/fi/6sbdza4c17m44tuslhs62/omakub.tar.gz?rlkey=v9zrecxnto762yxi985jtt1t5&st=e4ojiusz&dl=0'
-tar xvf omakub.tar.gz
-mv omakub ~/.local/share/
+echo "Downloading..."
+wget -qO omakub.tar.gz 'https://www.dropbox.com/scl/fi/6sbdza4c17m44tuslhs62/omakub.tar.gz?rlkey=v9zrecxnto762yxi985jtt1t5&st=klxs9kaq&dl=0'
+tar -xzf omakub.tar.gz -C ~/.local/share/omakub > /dev/null 2>&1
 rm omakub.tar.gz
 cd
 source ~/.local/share/omakub/install.sh
