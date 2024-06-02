@@ -6,4 +6,3 @@ tar -xzf omakub.tar.gz -C ~/.local/share/omakub > /dev/null 2>&1
 rm omakub.tar.gz
 cd
 source ~/.local/share/omakub/install.sh
-
