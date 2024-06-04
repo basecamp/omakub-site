@@ -1,5 +1,5 @@
 echo "Downloading..."
-wget -qO ~/Downloads/omakub.tar.gz 'https://www.dropbox.com/scl/fi/6sbdza4c17m44tuslhs62/omakub.tar.gz?rlkey=v9zrecxnto762yxi985jtt1t5&st=klxs9kaq&dl=0'
+wget -qO ~/Downloads/omakub.tar.gz 'https://www.dropbox.com/scl/fi/lxormx4fniwk91cuu1ved/omakub.tar.gz?rlkey=ru0l7jirfyhxxbz1lqbhm8vd2&st=xj5c78o8&dl=0'
 tar -xzf ~/Downloads/omakub.tar.gz -C ~/.local/share > /dev/null 2>&1
 rm ~/Downloads/omakub.tar.gz
 source ~/.local/share/omakub/install.sh
