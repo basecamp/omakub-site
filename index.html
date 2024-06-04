@@ -1,75 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Command Highlight</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #1a1b26;
-            color: #c0caf5;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        .command {
-            font-size: 1.5em;
-            font-weight: bold;
-            background: #1f2335;
-            color: #c0caf5;
-            padding: 20px;
-            border: 2px solid #3b4261;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            position: relative;
-            margin-bottom: 10px;
-        }
-        .copy-button {
-            margin-top: 20px;
-            font-size: 1em;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #7aa2f7;
-            color: #1a1b26;
-            cursor: pointer;
-        }
-        .copy-button:hover {
-            background-color: #3b4261;
-            color: #c0caf5;
-        }
-        .header {
-            font-size: 64px;
-            margin: 0;
-            padding: 0;
-            color: #b9f27c;
-        }
-        .tagline {
-            margin-top: 0;
-            padding-top: 0;
-            margin-bottom: 30px;
-            color: #7dcfff;
-        }
-    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OMAKUB — Command Highlight</title>
+        <style>
+            html {
+                font-size: 16px;
+            }
 
-    <script>
-        function copyToClipboard() {
-            const commandText = document.getElementById('command').innerText;
-            navigator.clipboard.writeText(commandText);
-        }
-    </script>
-</head>
-<body>
-    <h1 class="header">OMAKUB</h1>
-    <p class="tagline">An Omakase Developer Setup For Ubuntu 24.04 by DHH</p>
-    <div class="command" id="command">
-        wget -qO- https://omakub.org/install | bash
-    </div>
+            body {
+                align-items: stretch;
+                background: #1a1b26;
+                color: #c0caf5;
+                display: flex;
+                flex-direction: column;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 100%;
+                line-height: 1.4;
+                min-height: 100vh;
+                text-align: center;
+            }
 
-    <button class="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
-</body>
+            body, h1, p, ul, li {
+                margin: 0;
+            }
+
+            a {
+                color: inherit;
+            }
+
+            main {
+                align-items: center;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: center;
+                margin: 2em;
+            }
+
+            main h1 {
+                color: #b9f27c;
+                font-size: 4em;
+                line-height: 1;
+            }
+
+            main p {
+                color: #7dcfff;
+                margin: 0.25em 0 1.75em 0;
+            }
+
+            main button {
+                background: #7aa2f7;
+                border: none;
+                border-radius: 0.3em;
+                color: #1a1b26;
+                cursor: pointer;
+                font: inherit;
+                font-weight: bold;
+                line-height: 1;
+                margin-top: 2em;
+                padding: 0.85em 1.25em 0.75em 1.25em;
+            }
+
+            main button:hover {
+                background: #3b4261;
+                color: #c0caf5;
+            }
+
+            main #command {
+                background: #1f2335;
+                border: 2px solid #3b4261;
+                border-radius: 0.5em;
+                box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
+                color: #c0caf5;
+                font-family: inherit;
+                font-size: 1.5em;
+                font-weight: bold;
+                padding: 0.75em 1.25em;
+            }
+
+            footer {
+                align-items: center;
+                color: #7dcfff;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                margin: 0 2em 2em 2em;
+            }
+
+            footer ul {
+                align-items: center;
+                display: flex;
+                gap: 1ch;
+                list-style: none;
+                padding: 0;
+            }
+
+            footer img {
+                display: block;
+                height: 1.5em;
+                width: auto;
+            }
+        </style>
+
+        <script>
+            function copyToClipboard() {
+                const commandText = document.getElementById('command').innerText;
+                navigator.clipboard.writeText(commandText);
+            }
+        </script>
+    </head>
+
+    <body>
+        <main>
+            <h1>OMAKUB</h1>
+            <p>An Omakase Developer Setup For Ubuntu 24.04 by DHH</p>
+            <code id="command">wget -qO- https://omakub.org/install | bash</code>
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        </main>
+        <footer>
+            <p>Brought to you by the makers of:</p>
+            <ul>
+                <li><a href="https://basecamp.com"><img src="logo-basecamp.svg" alt="Basecamp"></a></li>
+                <li>and</li>
+                <li><a href="https://hey.com"><img src="logo-hey.svg" alt="HEY"></a></li>
+            </ul>
+            <p>&copy; 2024 <a href="https://37signals.com">37signals</a></p>
+        </footer>
+    </body>
 </html>
