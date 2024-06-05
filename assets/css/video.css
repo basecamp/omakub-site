@@ -1,7 +1,14 @@
 .video {
+
   display: flex;
   flex-direction: column;
   position: relative;
+
+  @media(min-width: 64em) {
+    margin-left: -2em;
+    margin-right: -2em;
+  }
+
 }
 
 .video video {
@@ -15,8 +22,8 @@
   cursor: pointer;
   height: 100%;
   left: 0;
-  overflow: hidden;
   position: absolute;
+  overflow: hidden;
   top: 0;
   width: 100%;
   z-index: 1;
