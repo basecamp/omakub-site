@@ -1,0 +1,66 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.video video {
+  border-radius: 0.3em;
+  display: block;
+  overflow: hidden;
+}
+
+.video button {
+  border-radius: 0.3em;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.video button:before {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--rgb-black), 0.2) 0,
+    rgba(var(--rgb-black), 0.7) 100%
+  );
+  border-radius: 0.3em;
+  content: '';
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: opacity var(--transition);
+  width: 100%;
+}
+
+.video button span {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background: url('../images/play.svg') center center no-repeat rgba(var(--rgb-white), 0.7);
+  background-size: 1.4em 1.4em;
+  border-radius: 100%;
+  box-shadow:
+    0 20px 30px -20px rgba(var(--rgb-black), 0.3),
+    0 10px 20px -10px rgba(var(--rgb-black), 0.5)
+  ;
+  display: inline-flex;
+  height: 3.6em;
+  position: relative;
+  transition:
+    background-color var(--transition),
+    transform var(--transition)
+  ;
+  width: 3.6em;
+  will-change: transform;
+}
+
+.video--playing button {
+  display: none;
+}

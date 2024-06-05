@@ -1,0 +1,20 @@
+footer {
+  align-items: center;
+  color: var(--color-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  text-align: center;
+}
+
+footer div {
+  align-items: center;
+  display: flex;
+  gap: 1.25em;
+}
+
+footer img {
+  display: block;
+  height: 2em;
+  width: auto;
+}
