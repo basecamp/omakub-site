@@ -71,3 +71,16 @@
 .video--playing button {
   display: none;
 }
+
+@media(hover: hover) {
+
+  button:hover:before {
+    opacity: 0.9;
+  }
+
+  button:hover span {
+    background-color: var(--color-white);
+    transform: scale(1.04);
+  }
+
+}
