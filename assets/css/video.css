@@ -12,13 +12,13 @@
 }
 
 .video video {
-  border-radius: 0.3em;
+  border-radius: 0.4em;
   display: block;
   overflow: hidden;
 }
 
 .video button {
-  border-radius: 0.3em;
+  border-radius: 0.4em;
   cursor: pointer;
   height: 100%;
   left: 0;
@@ -35,7 +35,7 @@
     rgba(var(--rgb-black), 0.2) 0,
     rgba(var(--rgb-black), 0.7) 100%
   );
-  border-radius: 0.3em;
+  border-radius: 0.4em;
   content: '';
   height: 100%;
   left: 0;
