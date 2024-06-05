@@ -74,11 +74,11 @@
 
 @media(hover: hover) {
 
-  button:hover:before {
+  .video button:hover:before {
     opacity: 0.9;
   }
 
-  button:hover span {
+  .video button:hover span {
     background-color: var(--color-white);
     transform: scale(1.04);
   }
