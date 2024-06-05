@@ -38,7 +38,7 @@
                 text-align: center;
             }
 
-            body, h1, p, ul, li {
+            body, h1, p {
                 margin: 0;
             }
 
@@ -74,28 +74,29 @@
                 margin: 0.25em 0 1.75em 0;
             }
 
-            main ul {
+            main div {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 1.25em;
                 justify-content: center;
-                list-style: none;
                 margin-top: 2em;
-                padding: 0;
             }
 
-            main a,
-            main button {
+            main .button {
+                align-items: center;
                 background: #7aa2f7;
                 border: none;
                 border-radius: 0.35em;
                 color: #1a1b26;
                 cursor: pointer;
-                display: block;
+                display: flex;
                 font: inherit;
                 font-weight: bold;
+                gap: 1ch;
+                height: 3.1em;
                 line-height: 1;
-                padding: 1.1em 1.5em 1em 1.5em;
+                padding-left: 1.4em;
+                padding-right: 1.4em;
                 text-decoration: none;
                 transition:
                     background 0.1s ease,
@@ -103,8 +104,21 @@
                 ;
             }
 
-            main a:hover,
-            main button:hover {
+            main .button span {
+                padding-top: 0.1em;
+            }
+
+            main .button svg {
+                height: 1.4em;
+                overflow: visible;
+                width: 1.4em;
+            }
+
+            main .button svg path {
+                transition: fill 0.1s ease;
+            }
+
+            main .button:hover {
                 background: #3b4261;
                 color: #fff;
             }
@@ -133,12 +147,10 @@
                 margin: 0 2em 2em 2em;
             }
 
-            footer ul {
+            footer div {
                 align-items: center;
                 display: flex;
                 gap: 1.25em;
-                list-style: none;
-                padding: 0;
             }
 
             footer img {
@@ -163,18 +175,23 @@
             <h1>Omakub</h1>
             <p>An Omakase Developer Setup For Ubuntu 24.04 by DHH</p>
             <code id="command">wget -qO- https://omakub.org/install | bash</code>
-            <ul>
-                <li><button onclick="copyToClipboard()">Copy the command</button></li>
-                <li><a href="https://github.com/basecamp/omakub">Learn more</a></li>
-            </ul>
+            <div>
+                <button class="button" onclick="copyToClipboard()">
+                    <span>Copy the command</span>
+                </button>
+                <a class="button" href="https://github.com/basecamp/omakub">
+                    <svg fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><clipPath id="a"><path d="m0 0h32v32h-32z"/></clipPath><g clip-path="url(#a)"><path d="m16 .789429c8.84 0 16 7.160001 16 15.999971-.0009 3.3524-1.053 6.6202-3.0083 9.3433s-4.7154 4.7644-7.8917 5.8367c-.8.16-1.1-.34-1.1-.76 0-.54.02-2.26.02-4.4 0-1.5-.5-2.46-1.08-2.96 3.56-.4 7.3-1.76 7.3-7.9 0-1.76-.62-3.18-1.64-4.3.16-.4.72-2.03997-.16-4.23997 0 0-1.34-.44-4.4 1.64-1.28-.36-2.64-.54-4-.54s-2.72.18-4 .54c-3.06-2.06-4.4-1.64-4.4-1.64-.88 2.2-.32 3.83997-.16 4.23997-1.02 1.12-1.64 2.56-1.64 4.3 0 6.12 3.72 7.5 7.28 7.9-.46.4-.88 1.1-1.02 2.14-.92.42-3.22 1.1-4.66-1.32-.3-.48-1.2-1.66-2.46-1.64-1.34.02-.54.76.02 1.06.68.38 1.46 1.8 1.64 2.26.32.9 1.36 2.62 5.38 1.88 0 1.34.02 2.6.02 2.98 0 .42-.3.9-1.1.76-3.18672-1.0607-5.95853-3.0979-7.92222-5.8227-1.96369-2.7247-3.01954096-5.9986-3.0177778-9.3573 0-8.83997 7.1599978-15.999971 15.9999978-15.999971z" fill="currentColor"/></g></svg>
+                    <span>Learn more</span>
+                </a>
+            </div>
         </main>
         <footer>
             <p>Brought to you by the makers of:</p>
-            <ul>
-                <li><a href="https://basecamp.com"><img src="logo-basecamp.svg" alt="Basecamp"></a></li>
-                <li><a href="https://hey.com"><img src="logo-hey.svg" alt="HEY"></a></li>
-                <li><a href="https://once.com"><img src="logo-once.svg" alt="ONCE"></a></li>
-            </ul>
+            <div>
+                <a href="https://basecamp.com"><img src="logo-basecamp.svg" alt="Basecamp"></a>
+                <a href="https://hey.com"><img src="logo-hey.svg" alt="HEY"></a>
+                <a href="https://once.com"><img src="logo-once.svg" alt="ONCE"></a>
+            </div>
             <p>&copy; 2024 <a href="https://37signals.com">37signals</a></p>
         </footer>
     </body>
