@@ -1,6 +1,8 @@
 .article {
 
   font-size: var(--font-size-medium);
+  margin-inline: auto;
+  width: min(100%, 48em);
 
   h2,
   h3 {

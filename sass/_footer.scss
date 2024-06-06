@@ -5,7 +5,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.25em;
+  margin-inline: auto;
+  margin-top: 4em;
   text-align: center;
+  width: min(100%, 64em);
 
   div {
     align-items: center;
@@ -17,6 +20,10 @@
     display: block;
     height: 2em;
     width: auto;
+  }
+
+  @media(min-width: 64em) {
+    margin-top: 8em;
   }
 
 }

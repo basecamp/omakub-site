@@ -5,7 +5,9 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  margin-inline: auto;
   text-align: center;
+  width: min(100%, 64em);
 
   h1 {
     color: var(--color-green);
