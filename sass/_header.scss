@@ -43,9 +43,9 @@
       0 1.2em 1.2em -1.6em rgba(var(--rgb-black), 0.6)
     ;
     color: var(--color-purple-2);
-    font-size: var(--font-size-medium);
     padding: 0.75em 1.25em;
     transition: transform var(--transition);
+    will-change: transform;
   }
 
   @media(hover: hover) {
