@@ -12,7 +12,7 @@
   h1 {
     color: var(--color-green);
     font-size: var(--font-size-x-large);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
   }
@@ -27,7 +27,7 @@
   div {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.25em;
+    gap: 1em;
     justify-content: center;
     margin-top: 2em;
   }

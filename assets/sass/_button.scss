@@ -7,13 +7,14 @@
   color: var(--color-dark-1);
   cursor: pointer;
   display: flex;
-  font-weight: 600;
-  gap: 0.7em;
-  height: 3.3em;
+  font-weight: 700;
+  gap: 1ch;
+  height: 3.1em;
   line-height: 1;
-  padding-left: 1.3em;
-  padding-right: 1.3em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
   text-decoration: none;
+  text-transform: uppercase;
   transition:
     background var(--transition),
     color var(--transition)
@@ -34,8 +35,8 @@
   @media(hover: hover) {
 
     &:hover {
-      background: var(--color-dark-3);
-      color: var(--color-white);
+      background: var(--color-white);
+      color: var(--color-dark-1);
     }
 
   }
