@@ -12,6 +12,7 @@
   h1 {
     color: var(--color-green);
     font-size: var(--font-size-x-large);
+    font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
   }
@@ -43,7 +44,7 @@
       0 1.2em 1.2em -1.6em rgba(var(--rgb-black), 0.6)
     ;
     color: var(--color-purple-2);
-    padding: 0.75em 1.25em;
+    padding: 0.7em 1.2em;
     transition: transform var(--transition);
     will-change: transform;
   }

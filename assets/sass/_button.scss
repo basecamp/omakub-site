@@ -7,20 +7,17 @@
   color: var(--color-dark-1);
   cursor: pointer;
   display: flex;
-  gap: 1ch;
-  height: 3.1em;
+  font-weight: 600;
+  gap: 0.7em;
+  height: 3.3em;
   line-height: 1;
-  padding-left: 1.4em;
-  padding-right: 1.4em;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
   text-decoration: none;
   transition:
     background var(--transition),
     color var(--transition)
   ;
-
-  span {
-    padding-top: 0.1em;
-  }
 
   svg {
 
