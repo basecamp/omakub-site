@@ -52,12 +52,12 @@
   }
 
   code {
-    background: var(--color-blue);
+    background: var(--color-dark-2);
     border-radius: 0.1em;
-    color: var(--color-dark-1);
+    color: var(--color-blue);
     display: inline-block;
     line-height: 1;
-    padding: 0.1em 0.25em;
+    padding: 0.15em 0.3em;
   }
 
   .highlight {
@@ -76,7 +76,6 @@
       code {
         background: none;
         border-radius: initial;
-        color: var(--color-blue);
         padding: 0;
       }
 
