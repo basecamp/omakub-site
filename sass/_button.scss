@@ -1,0 +1,46 @@
+.button {
+
+  align-items: center;
+  background: var(--color-purple-1);
+  border: none;
+  border-radius: 0.35em;
+  color: var(--color-dark-1);
+  cursor: pointer;
+  display: flex;
+  gap: 1ch;
+  height: 3.1em;
+  line-height: 1;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  text-decoration: none;
+  transition:
+    background var(--transition),
+    color var(--transition)
+  ;
+
+  span {
+    padding-top: 0.1em;
+  }
+
+  svg {
+
+    height: 1.4em;
+    overflow: visible;
+    width: 1.4em;
+
+    path {
+      transition: fill var(--transition);
+    }
+
+  }
+
+  @media(hover: hover) {
+
+    &:hover {
+      background: var(--color-dark-3);
+      color: var(--color-white);
+    }
+
+  }
+
+}
