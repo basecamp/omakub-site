@@ -1,40 +1,41 @@
 function ready() {
 
-  document.querySelectorAll('.video').forEach(video => {
+  const video = document.querySelector('.video');
+  const videoElement = video.querySelector('video');
+  const videoEvent = videoElement.dataset.event;
 
-    var video_element = video.querySelector('video');
-    var video_event = video_element.dataset.event;
+  video.querySelector('button').addEventListener('click', () => {
 
-    video.querySelector('button').addEventListener('click', function() {
+    if(videoElement.paused) {
 
-      if(video_element.paused) {
+      videoElement.play();
 
-        video_element.play();
+    } else {
 
-      } else {
+      videoElement.pause();
 
-        video_element.pause();
+    }
 
-      }
+  });
 
-    });
+  videoElement.addEventListener('play', (e) => {
 
-    video_element.addEventListener('play', (e) => {
+    if(window.plausible && videoEvent && e.target.currentTime == 0) plausible('Video Start', {props: {title: videoEvent}});
 
-      video.classList.add('video--playing');
+    video.classList.add('video--playing');
 
-      e.target.setAttribute('controls', 'controls');
+    e.target.setAttribute('controls', 'controls');
 
-    });
+  });
 
-    video_element.addEventListener('ended', (e) => {
+  videoElement.addEventListener('ended', (e) => {
 
-      video.classList.remove('video--playing');
+    if(window.plausible && videoEvent) plausible('Video Finish', {props: {title: videoEvent}});
 
-      e.target.removeAttribute('controls');
-      e.target.load();
+    video.classList.remove('video--playing');
 
-    });
+    e.target.removeAttribute('controls');
+    e.target.load();
 
   });
 
