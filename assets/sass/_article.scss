@@ -28,7 +28,7 @@
   hr {
 
     --spacing: 0;
-    background: var(--color-dark-3);
+    background: var(--color-terminal-black);
     height: 2px;
     margin-bottom: 2.525em;
     margin-top: 2.625em;
@@ -44,47 +44,36 @@
     padding-left: 1.4em;
   }
 
-  a {
-    color: var(--color-blue);
-    font-weight: 700;
-    text-decoration-thickness: 0.0875em;
-    text-underline-offset: 0.125em;
+  i,
+  em {
+    color: var(--color-terminal-white);
   }
 
   code {
-    background: var(--color-dark-2);
+    background: var(--color-background-storm);
     border-radius: 0.1em;
-    color: var(--color-blue);
+    color: var(--color-turquoise);
     display: inline-block;
     line-height: 1;
     padding: 0.15em 0.3em;
   }
 
-  .highlight {
-
-    background: var(--color-dark-2);
-    border-radius: 0.2em;
-    display: block;
-    line-height: var(--line-height);
-
-    pre {
-
-      overflow-x: auto;
-      padding: 0.6em 1.2em;
-      white-space: pre;
-
-      code {
-        background: none;
-        border-radius: initial;
-        padding: 0;
-      }
-
-    }
-
+  .command pre code {
+    background: none;
+    border-radius: initial;
+    padding: 0;
   }
 
   & > * + * {
     margin-top: var(--spacing, 1.3em);
+  }
+
+  @media(hover: hover) {
+
+    h2 a:hover {
+      color: inherit;
+    }
+
   }
 
   @media(min-width: 64em) {
@@ -96,18 +85,6 @@
     hr {
       margin-bottom: 3.475em;
       margin-top: 3.65em;
-    }
-
-  }
-
-  @media(hover: hover) {
-
-    h2 a:hover {
-      color: inherit;
-    }
-
-    a:hover {
-      color: var(--color-white);
     }
 
   }

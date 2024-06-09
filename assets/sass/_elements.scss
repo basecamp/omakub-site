@@ -1,6 +1,6 @@
 html {
 
-  background: var(--color-dark-1);
+  background: var(--color-background-night);
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 3em;
@@ -13,8 +13,8 @@ html {
 
 body {
   align-items: stretch;
-  background: var(--color-dark-1);
-  color: var(--color-purple-1);
+  background: var(--color-background-night);
+  color: var(--color-terminal-blue);
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
@@ -24,9 +24,10 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration-thickness: 0.05em;
-  text-underline-offset: 0.15em;
+  color: var(--color-terminal-cyan);
+  font-weight: 700;
+  text-decoration-thickness: 0.0875em;
+  text-underline-offset: 0.125em;
   transition: color var(--transition);
 }
 
