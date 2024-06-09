@@ -1,14 +1,21 @@
 function ready() {
 
-  document.querySelector('.button--command').addEventListener('click', (e) => {
+  const commandListener = (button, code) => {
 
-    e.preventDefault();
+    document.querySelector(button).addEventListener('click', (e) => {
 
-    const commandText = document.getElementById('command').innerText.trim();
+      e.preventDefault();
 
-    navigator.clipboard.writeText(commandText);
+      const commandText = document.querySelector(code).innerText.trim();
 
-  });
+      navigator.clipboard.writeText(commandText);
+
+    });
+
+  };
+
+  commandListener('.header__buttons .button--command', '.header__command pre code');
+  commandListener('.command--copy button', '.command--copy pre code');
 
 }
 
