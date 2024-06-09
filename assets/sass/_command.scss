@@ -1,0 +1,114 @@
+.command {
+
+  background: var(--color-background-storm);
+  border-radius: 0.4em;
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  pre {
+
+    color: var(--color-turquoise);
+    display: block;
+    -ms-overflow-style: none;
+    overflow-x: auto;
+    padding: 0.7em 1.2em;
+    scrollbar-width: none;
+    white-space: pre;
+
+    code {
+      line-height: 1;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 1.2em;
+  }
+
+  &:before {
+    background: linear-gradient(
+      90deg,
+      rgba(var(--rgb-background-storm), 0) 0,
+      var(--color-background-storm) 100%
+    );
+    left: calc(100% - 1.2em);
+  }
+
+  &:after {
+    background: linear-gradient(
+      -90deg,
+      rgba(var(--rgb-background-storm), 0) 0,
+      var(--color-background-storm) 100%
+    );
+    right: calc(100% - 1.2em);
+  }
+
+  &--copy {
+
+    transition: transform var(--transition);
+    will-change: transform;
+
+    pre {
+      padding-right: 2.8em;
+    }
+
+    button {
+
+      color: rgba(var(--rgb-turquoise), 0.25);
+      cursor: pointer;
+      padding: 0.8em;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: color var(--transition);
+      z-index: 1;
+
+      svg {
+        height: 1.2em;
+        overflow: visible;
+        width: 1.2em;
+      }
+
+    }
+
+    &:before {
+      background: linear-gradient(
+        90deg,
+        rgba(var(--rgb-background-storm), 0) 0,
+        var(--color-background-storm) 33%
+      );
+      left: calc(100% - 3em);
+      width: 3em;
+    }
+
+  }
+
+  @media(hover: hover) {
+
+    &--copy {
+
+      button:hover {
+        color: var(--color-turquoise);
+      }
+
+      &:has(button:active) {
+        transform: scale(1.01);
+      }
+
+    }
+
+  }
+
+}
