@@ -1,21 +1,22 @@
 function ready() {
 
-  const commandListener = (button, code) => {
+  document.querySelectorAll('.command--copy').forEach(command => {
 
-    document.querySelector(button).addEventListener('click', (e) => {
+    const button = document.createElement('button');
+
+    command.append(button);
+
+    button.addEventListener('click', (e) => {
 
       e.preventDefault();
 
-      const commandText = document.querySelector(code).innerText.trim();
+      const code = command.querySelector('code').innerText.trim();
 
-      navigator.clipboard.writeText(commandText);
+      navigator.clipboard.writeText(code);
 
     });
 
-  };
-
-  commandListener('.header__buttons .button--command', '.header__command pre code');
-  commandListener('.command--copy button', '.command--copy pre code');
+  });
 
 }
 

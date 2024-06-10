@@ -11,6 +11,7 @@
 
     color: var(--color-turquoise);
     display: block;
+    line-height: 1.4em;
     -ms-overflow-style: none;
     overflow-x: auto;
     padding: 0.7em 1.2em;
@@ -25,6 +26,10 @@
       display: none;
     }
 
+  }
+
+  button {
+    display: none;
   }
 
   &:before,
@@ -55,56 +60,55 @@
     right: calc(100% - 1.2em);
   }
 
-  &--copy {
-
-    transition: transform var(--transition);
-    will-change: transform;
-
-    pre {
-      padding-right: 2.8em;
-    }
-
-    button {
-
-      color: rgba(var(--rgb-turquoise), 0.25);
-      cursor: pointer;
-      padding: 0.8em;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transition: color var(--transition);
-      z-index: 1;
-
-      svg {
-        height: 1.2em;
-        overflow: visible;
-        width: 1.2em;
-      }
-
-    }
-
-    &:before {
-      background: linear-gradient(
-        90deg,
-        rgba(var(--rgb-background-storm), 0) 0,
-        var(--color-background-storm) 33%
-      );
-      left: calc(100% - 3em);
-      width: 3em;
-    }
-
-  }
-
   @media(hover: hover) {
 
     &--copy {
 
       button:hover {
-        color: var(--color-turquoise);
+        opacity: 1;
       }
 
       &:has(button:active) {
         transform: scale(1.01);
+      }
+
+    }
+
+  }
+
+  @media(min-width: 64em) {
+
+    &--copy {
+
+      transition: transform var(--transition);
+      will-change: transform;
+
+      pre {
+        padding-right: 2.8em;
+      }
+
+      button {
+        background: url(../images/copy.svg) center center / 1.2em 1.2em no-repeat;
+        cursor: pointer;
+        display: block;
+        height: 2.8em;
+        opacity: 0.25;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: opacity var(--transition);
+        width: 2.8em;
+        z-index: 1;
+      }
+
+      &:before {
+        background: linear-gradient(
+          90deg,
+          rgba(var(--rgb-background-storm), 0) 0,
+          var(--color-background-storm) 33%
+        );
+        left: calc(100% - 3em);
+        width: 3em;
       }
 
     }
