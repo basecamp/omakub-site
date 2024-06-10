@@ -34,11 +34,24 @@
     width: 1.4em;
   }
 
+  &--disabled {
+    background: var(--color-background-storm);
+    box-shadow: none;
+    color: rgba(var(--rgb-terminal-white), 0.4);
+    cursor: auto;
+    pointer-events: none;
+  }
+
   @media(hover: hover) {
 
     &:hover {
       background: var(--color-turquoise);
       color: var(--color-background-night);
+    }
+
+    &--disabled:hover {
+      background: var(--color-background-storm);
+      color: rgba(var(--rgb-terminal-white), 0.4);
     }
 
   }
