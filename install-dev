@@ -11,11 +11,11 @@ ________                  __        ___.
 # Halt on errors
 set -e
 
-echo $ascii_art
+echo -e "$ascii_art"
 echo "=> Omakub is for fresh Ubuntu 24.04 installations only <="
 
 read -p "Begin install? [Y/n]" yn
-if [[ "$yn" =~ ^[Yy]$ ]]; then
+if [[ "$yn" =~ ^[Yy]$ || -z "$yn" ]]; then
   echo "Installing git..."
   sudo apt-get update > /dev/null 2>&1
   sudo apt-get install -y git > /dev/null 2>&1
