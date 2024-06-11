@@ -5,14 +5,13 @@ ________                  __        ___.
 /    |    \  Y Y  \/ __ \|    <|  |  / \_\ \
 \_______  /__|_|  (____  /__|_ \____/|___  /
         \/      \/     \/     \/         \/
-
 '
 
 # Halt on errors
 set -e
 
 echo -e "$ascii_art"
-echo "=> Omakub is for fresh Ubuntu 24.04 installations only <="
+echo "=> Omakub is for fresh Ubuntu 24.04 installations only!"
 
 read -p "Begin install? [Y/n]" yn
 if [[ "$yn" =~ ^[Yy]$ || -z "$yn" ]]; then
