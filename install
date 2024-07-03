@@ -1,8 +1,1 @@
-echo "Installing git..."
-sudo apt-get update > /dev/null
-sudo apt-get install -y git > /dev/null
-
-echo "Cloning stable OMAKUB..."
-git clone -b stable https://github.com/basecamp/omakub.git ~/.local/share/omakub > /dev/null
-
-source ~/.local/share/omakub/install.sh
+eval "$(wget -qO- https://raw.githubusercontent.com/basecamp/omakub/master/boot.sh)"
