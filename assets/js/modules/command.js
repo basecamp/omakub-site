@@ -6,6 +6,8 @@ function ready() {
 
     command.append(button);
 
+    button.setAttribute('aria-label', 'Copy the Omakub install command');
+
     button.addEventListener('click', (e) => {
 
       e.preventDefault();
