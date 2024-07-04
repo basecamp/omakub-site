@@ -1,1 +1,2 @@
-eval "$(wget -qO- https://raw.githubusercontent.com/basecamp/omakub/master/boot-dev.sh)"
+OMAKUB_REF=master
+eval "$(wget -qO- https://raw.githubusercontent.com/basecamp/omakub/master/boot.sh)"
