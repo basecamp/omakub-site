@@ -1,12 +1,12 @@
-@import 'reset';
-@import 'root';
-@import 'fonts';
-@import 'elements';
+@use 'reset';
+@use 'root';
+@use 'fonts';
+@use 'elements';
 
-@import 'article';
-@import 'button';
-@import 'command';
-@import 'footer';
-@import 'header';
-@import 'main';
-@import 'video';
+@use 'article';
+@use 'button';
+@use 'command';
+@use 'footer';
+@use 'header';
+@use 'main';
+@use 'video';
