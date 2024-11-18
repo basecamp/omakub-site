@@ -49,6 +49,13 @@ video {
   width: 100%;
 }
 
+video::cue {
+  font-family: var(--font-family);
+  font-size: 75%;
+  font-weight: 600;
+  line-height: 1;
+}
+
 @media(hover: hover) {
 
   a:hover {
