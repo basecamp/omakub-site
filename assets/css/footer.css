@@ -1,5 +1,4 @@
 .footer {
-
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -8,20 +7,23 @@
   margin-top: 4em;
   text-align: center;
   width: min(100%, 64em);
+}
 
-  div {
-    align-items: center;
-    display: flex;
-    gap: 1.25em;
-  }
+.footer div {
+  align-items: center;
+  display: flex;
+  gap: 1.25em;
+}
 
-  img {
-    display: block;
-    height: 2em;
-    width: auto;
-  }
+.footer img {
+  display: block;
+  height: 2em;
+  width: auto;
+}
 
-  @media(min-width: 64em) {
+@media(min-width: 64em) {
+
+  .footer {
     margin-top: 8em;
   }
 

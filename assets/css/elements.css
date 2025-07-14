@@ -1,14 +1,8 @@
 html {
-
   background: var(--color-background-night);
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 3em;
-
-  @media(min-width: 64em) {
-    scroll-padding-top: 4em;
-  }
-
 }
 
 body {
@@ -51,7 +45,7 @@ video {
 
 video::cue {
   font-family: var(--font-family);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-medium);
   font-weight: 600;
   line-height: 1;
 }
@@ -60,6 +54,14 @@ video::cue {
 
   a:hover {
     color: var(--color-white);
+  }
+
+}
+
+@media(min-width: 64em) {
+
+  html {
+    scroll-padding-top: 4em;
   }
 
 }
