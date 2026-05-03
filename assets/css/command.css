@@ -62,6 +62,11 @@
 
 @media(hover: hover) {
 
+  .command.command--copy {
+    transition: transform var(--transition);
+    will-change: transform;
+  }
+
   .command.command--copy button:hover {
     opacity: 1;
   }
@@ -75,6 +80,11 @@
 
 
 @media(min-width: 64em) {
+
+  .command {
+    border-radius: 0.3em;
+    font-size: var(--font-size-medium);
+  }
 
   .command.command--copy {
     transition: transform var(--transition);
