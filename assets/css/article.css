@@ -8,6 +8,7 @@
 
 .article h2 {
   --spacing: 2.1em;
+
   color: var(--color-green);
   font-size: var(--font-size-large);
   font-weight: 600;
@@ -25,6 +26,7 @@
 
 .article hr {
   --spacing: 0;
+
   background: var(--color-terminal-black);
   height: 2px;
   margin-bottom: 2.525em;
@@ -64,6 +66,8 @@
   margin-top: var(--spacing, 1.3em);
 }
 
+
+
 @media(hover: hover) {
 
   .article h2 a:hover {
@@ -72,12 +76,13 @@
 
 }
 
+
+
 @media(min-width: 64em) {
 
   .article {
     font-size: var(--font-size-medium);
-    margin-bottom: -0.35em;
-    margin-top: -0.35em;
+    margin-block: -0.35em;
   }
 
   .article hr {

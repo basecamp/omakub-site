@@ -1,9 +1,8 @@
 .video {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3em;
+  margin-block: 3em;
   margin-inline: auto;
-  margin-top: 3em;
   position: relative;
   width: min(100%, 80em);
 }
@@ -37,7 +36,7 @@
 .video button:after {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  background: url(../images/play.svg) center center / 1.8em 1.8em no-repeat rgba(var(--rgb-turquoise), 0.8);
+  background: url('../images/play.svg') center / auto 1.8em no-repeat rgba(var(--rgb-turquoise), 0.8);
   border-radius: 100%;
   box-shadow:
     0 0 0 1px rgba(var(--rgb-black), 0.05),
@@ -56,9 +55,13 @@
   will-change: transform;
 }
 
+
+
 .video--playing button {
   display: none;
 }
+
+
 
 @media(hover: hover) {
 
@@ -69,11 +72,12 @@
 
 }
 
+
+
 @media(min-width: 64em) {
 
   .video {
-    margin-bottom: 5em;
-    margin-top: 5em;
+    margin-block: 5em;
   }
 
 }

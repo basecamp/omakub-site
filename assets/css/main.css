@@ -2,19 +2,17 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  margin-bottom: 4em;
-  margin-top: 4em;
-  padding-left: 2em;
-  padding-right: 2em;
+  margin-block: 4em;
+  padding-inline: 2em;
 }
+
+
 
 @media(min-width: 64em) {
 
   .main {
-    margin-bottom: 8em;
-    margin-top: 8em;
-    padding-left: 4em;
-    padding-right: 4em;
+    margin-block: 8em;
+    padding-inline: 4em;
   }
 
 }

@@ -1,5 +1,4 @@
 html {
-  background: var(--color-background-night);
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 3em;
@@ -15,6 +14,7 @@ body {
   font-weight: 300;
   line-height: var(--line-height);
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 a {
@@ -50,6 +50,8 @@ video::cue {
   line-height: 1;
 }
 
+
+
 @media(hover: hover) {
 
   a:hover {
@@ -57,6 +59,8 @@ video::cue {
   }
 
 }
+
+
 
 @media(min-width: 64em) {
 

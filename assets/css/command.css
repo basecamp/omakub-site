@@ -43,7 +43,7 @@
 .command:before {
   background: linear-gradient(
     90deg,
-    rgba(var(--rgb-background-storm), 0) 0,
+    transparent,
     var(--color-background-storm) 100%
   );
   left: calc(100% - 1.2em);
@@ -52,11 +52,13 @@
 .command:after {
   background: linear-gradient(
     -90deg,
-    rgba(var(--rgb-background-storm), 0) 0,
+    transparent,
     var(--color-background-storm) 100%
   );
   right: calc(100% - 1.2em);
 }
+
+
 
 @media(hover: hover) {
 
@@ -70,6 +72,8 @@
 
 }
 
+
+
 @media(min-width: 64em) {
 
   .command.command--copy {
@@ -82,7 +86,7 @@
   }
 
   .command.command--copy button {
-    background: url(../images/copy.svg) center center / 1.2em 1.2em no-repeat;
+    background: url('../images/copy.svg') center / auto 1.2em no-repeat;
     cursor: pointer;
     display: block;
     height: 2.8em;
@@ -98,7 +102,7 @@
   .command.command--copy:before {
     background: linear-gradient(
       90deg,
-      rgba(var(--rgb-background-storm), 0) 0,
+      transparent,
       var(--color-background-storm) 33%
     );
     left: calc(100% - 3em);
